@@ -1,0 +1,5 @@
+Mencari luas persegi Panjang
+1. Masukkan panjang
+2. Masukkan lebar
+3. Luas = Panjang * lebar
+4. Output luas
