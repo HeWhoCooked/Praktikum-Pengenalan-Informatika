@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 struct Barang {
@@ -38,3 +37,4 @@ int main()
     
     return 0;
 }
+
