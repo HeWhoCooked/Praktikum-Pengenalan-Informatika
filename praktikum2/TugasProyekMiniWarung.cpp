@@ -13,7 +13,7 @@ int main()
     Barang warung[3] = {
         {"Sabun", 20, 3000},
         {"Shampoo", 8, 500},
-        {"Air mineral", 10, 3000}
+        {"LeMineral", 10, 3000}
     };
     
     string cari;
@@ -37,4 +37,5 @@ int main()
     
     return 0;
 }
+
 
