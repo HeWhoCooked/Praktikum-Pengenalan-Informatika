@@ -30,12 +30,14 @@ int main()
             ketemu = true;
             break;
         }
-        if (!ketemu) {
+    }
+    
+    if (!ketemu) {
             cout << "Barangnya ga ada" << endl;
         }
-    }
     
     return 0;
 }
+
 
 
