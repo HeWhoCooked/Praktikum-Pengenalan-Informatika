@@ -14,23 +14,6 @@ int hitungTotal(int harga, int jumlah)
 	return harga * jumlah;
 }
 
-// Fungsi diskon
-int hitungDiskon(int totalBelanja)
-{
-	if (totalBelanja >= 50000)
-	{
-		return totalBelanja * 0.25; // Diskon 25%
-	}
-	else if (totalBelanja >= 20000)
-	{
-		return totalBelanja * 0.10; // Diskon 10%
-	}
-	else
-	{
-		return 0; // ga ada diskon
-	}
-}
-
 int main()
 {
 	Barang daftar[6] = {{"Ayam Geprek", 8000}, {"Teh Manis", 4000}, {"Nasi", 3000},
@@ -69,28 +52,28 @@ int main()
 
 	} while (lanjut == 'y' || lanjut == 'Y');
 
-	// Hitung diskon pake Fungsi
+	// diskon
+	totalDiskon = 0;
 
-	diskon = hitungDiskon(totalBelanja);
+	if (totalBayar < 20000) {
+        totalDiskon = totalBayar * 0.10;
+    } else if (totalBayar == 35000) {
+        totalDiskon = totalBayar * 0.25;
+    } else if (totalBayar > 50000) {
+        totalDiskon = totalBayar * 0.35;
+    } else {
+        totalDiskon = 0;
+    }
+
 	totalKeseluruhan = totalBayar - totalDiskon;
 
-	cout << "Total Belanja : Rp." << totalBelanja << endl;
-	cout << "Diskon : Rp." << diskon << endl;
-	cout << "\nTotal keseluruhan : Rp." << totalKeseluruhan << endl;
-
 	// Message
-	if (totalKeseluruhan >= 50000) 
-	{
-		cout << "Terimakasih banget bang" << endl;
-	} 
-	else if (totalKeseluruhan >= 20000)
-	{
-		cout << "Terimakasih bang" << endl;
-	} 
-	else 
-	{
-	    cout << "Terimakasih" << endl;
-	}
+     if (totalKeseluruhan <= 25000) {
+        cout << "Terimakasih bang" << endl;
+    } else if (totalKeseluruhan >= 50000) {
+        cout << "Terimakasih banget bang" << endl;
+    }
 
+	cout << "\nTotal keseluruhan: Rp." << totalKeseluruhan << endl;
 	return 0;
 }
